@@ -284,7 +284,7 @@ import QuartzCore
     CATransaction.setDisableActions(true)
     let newTrackDy = (frame.height - TrackThickness) / 2
     
-    track.frame = CGRect(x: trackPadding, y: newTrackDy, width: frame.width-trackPadding, height: TrackThickness)
+    track.frame = CGRect(x: trackPadding, y: newTrackDy, width: frame.width-trackPadding*2, height: TrackThickness)
     track.setNeedsDisplay()
     
     let lowerKnobCenter = positionForValue(lowerValue)

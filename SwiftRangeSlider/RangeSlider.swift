@@ -182,7 +182,9 @@ import QuartzCore
   var lowerLabelTextSize: CGSize!
   var upperLabelTextSize: CGSize!
   
-  let track = RangeSliderTrack()
+  // HC Notes - Make track available to external access to update frame size
+  open let track = RangeSliderTrack()
+    
   let lowerKnob = RangeSliderKnob()
   let upperKnob = RangeSliderKnob()
   let lowerLabel = CATextLayer()

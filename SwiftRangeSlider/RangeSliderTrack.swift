@@ -9,10 +9,10 @@
 import UIKit
 import QuartzCore
 
-class RangeSliderTrack: CALayer {
+open class RangeSliderTrack: CALayer {
   weak var rangeSlider: RangeSlider?
   
-  override func draw(in ctx: CGContext) {
+  override open func draw(in ctx: CGContext) {
     if let slider = rangeSlider {
       // Clip
       let cornerRadius = bounds.height * slider.curvaceousness / 2.0

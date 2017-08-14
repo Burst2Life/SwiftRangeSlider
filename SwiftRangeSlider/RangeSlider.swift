@@ -55,6 +55,13 @@ import QuartzCore
       updateTrackLayerFrameAndKnobPositions()
     }
   }
+    
+  ///Padding added to Track Default to 0.0
+  @IBInspectable open var trackPadding: CGFloat = 0.0 {
+    didSet {
+        updateTrackLayerFrameAndKnobPositions()
+    }
+  }
   
   ///The color of the track bar outside of the selected range
   @IBInspectable open var trackTintColor: UIColor = UIColor(white: 0.9, alpha: 1.0) {
@@ -276,7 +283,8 @@ import QuartzCore
     CATransaction.begin()
     CATransaction.setDisableActions(true)
     let newTrackDy = (frame.height - TrackThickness) / 2
-    track.frame = CGRect(x: 0, y: newTrackDy, width: frame.width, height: TrackThickness)
+    
+    track.frame = CGRect(x: trackPadding, y: newTrackDy, width: frame.width-trackPadding, height: TrackThickness)
     track.setNeedsDisplay()
     
     let lowerKnobCenter = positionForValue(lowerValue)

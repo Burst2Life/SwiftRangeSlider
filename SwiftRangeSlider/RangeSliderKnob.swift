@@ -21,7 +21,7 @@ public enum KnobAnchorPosition {
   case center
 }
 
-class RangeSliderKnob: CALayer {
+open class RangeSliderKnob: CALayer {
   static var KnobDelta: CGFloat = 2.0
     
   var highlighted: Bool = false {

@@ -35,7 +35,7 @@ open class RangeSliderKnob: CALayer {
   }
   weak var rangeSlider: RangeSlider?
   
-  override func draw(in ctx: CGContext) {
+  open override func draw(in ctx: CGContext) {
     if let slider = rangeSlider {
       let knobFrame = bounds.insetBy(dx: RangeSliderKnob.KnobDelta, dy: RangeSliderKnob.KnobDelta)
       let cornerRadius = knobFrame.height * slider.curvaceousness / 2

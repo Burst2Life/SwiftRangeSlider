@@ -191,9 +191,11 @@ import QuartzCore
   
   // HC Notes - Make track available to external access to update frame size
   open let track = RangeSliderTrack()
-    
-  let lowerKnob = RangeSliderKnob()
-  let upperKnob = RangeSliderKnob()
+  
+  // HC Notes - Make lower and upper knob available to external access in order to hide one of the knob to simulate normal step slider
+  open let lowerKnob = RangeSliderKnob()
+  open let upperKnob = RangeSliderKnob()
+  
   let lowerLabel = CATextLayer()
   let upperLabel = CATextLayer()
   
